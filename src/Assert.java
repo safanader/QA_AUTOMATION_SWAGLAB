@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.asserts.IAssert;
 
 public class Assert {
 
@@ -11,15 +12,16 @@ public class Assert {
 		driver.get("https://www.saucedemo.com");
 		driver.manage().window().maximize();
 		
-		String actuaTitle = driver.getTitle();
-		String expectedTitle = "Swag Labs";
-		Assert.assertEquals(actuaTitle, expectedTitle);
-
-	}
-
-	private static void assertEquals(String actuaTitle, String expectedTitle) {
-		// TODO Auto-generated method stub
+		String actualTitle = driver.getTitle();
+		String expectedTitle = "hello";
 		
+	
+		org.testng.Assert.assertEquals(actualTitle, expectedTitle);
 	}
+
+
+
+
+
 
 }
